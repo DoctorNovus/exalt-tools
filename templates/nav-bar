@@ -1,0 +1,11 @@
+import { Component, html } from "@exalt/core";
+
+import style from "./{{componentName}}.css";
+
+export class {{className}} extends Component {
+    render(){
+        return html`<div><a href="">Test</a></div>`;
+    }
+}
+
+Component.create({ name: "{{componentName}}", styles: [style] }, {{className}});

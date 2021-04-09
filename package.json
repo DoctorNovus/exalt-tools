@@ -1,0 +1,25 @@
+{
+  "name": "exalt-tools",
+  "version": "1.0.0",
+  "description": "A CLI interface for exalt tools",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ottegi/exalt-tools.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ottegi/exalt-tools/issues"
+  },
+  "homepage": "https://github.com/Ottegi/exalt-tools#readme",
+  "bin": {
+    "exalt-tools": "./bin/exalt-tools.js"
+  },
+  "dependencies": {
+    "rollup": "^2.45.0"
+  }
+}
