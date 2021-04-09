@@ -73,16 +73,18 @@ function create(args) {
         default:
             let path = `${process.cwd()}/templates`;
 
-            if(fs__default['default'].existsSync(path)){
+            if (fs__default['default'].existsSync(path)) {
                 if (!args[1]) {
                     console.log("Please use the syntax:\nexalt-tools create <type> <component-name>");
                     return;
                 }
 
                 let files = fs__default['default'].readdirSync(path);
-                for(let file of files){
+                let error = true;
+
+                for (let file of files) {
                     file = file.split(".tt")[0];
-                    if(args[0] == file){
+                    if (args[0] == file) {
                         let component = args[1].split("-").map(a => capitalize(a)).join("");
 
                         let content = fs__default['default'].readFileSync(`${path}/${file}.tt`);
@@ -93,10 +95,12 @@ function create(args) {
                         });
 
                         output(args[1], content);
-                    } else {
-                        console.log("Invalid type. Please make sure you either choose 'base' or a type inside your root/templates folder.");
+                        error = false;
                     }
                 }
+
+                if (error)
+                    console.log("Invalid type. Please make sure you either choose 'base' or a type inside your root/templates folder.");
             } else {
                 console.log("Invalid type. Please make sure you either choose 'base' or a type inside your root/templates folder.");
             }
