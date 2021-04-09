@@ -34,7 +34,7 @@ export default function create(args) {
 
                 let files = fs.readdirSync(path);
                 for(let file of files){
-                    file = file.split(".js")[0];
+                    file = file.split(".tt")[0];
                     if(args[0] == file){
                         let component = args[1].split("-").map(a => capitalize(a)).join("");
 
