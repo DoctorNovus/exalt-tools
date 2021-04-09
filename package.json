@@ -19,7 +19,7 @@
   "bin": {
     "exalt-tools": "./bin/exalt-tools.js"
   },
-  "dependencies": {
+  "devDependencies": {
     "rollup": "^2.45.0"
   }
 }

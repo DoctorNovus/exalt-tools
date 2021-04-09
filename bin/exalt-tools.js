@@ -85,7 +85,7 @@ function create(args) {
                     if(args[0] == file){
                         let component = args[1].split("-").map(a => capitalize(a)).join("");
 
-                        let content = fs__default['default'].readFileSync(`${path}/${file}`);
+                        let content = fs__default['default'].readFileSync(`${path}/${file}.tt`);
                         content = Buffer.from(content).toString("utf-8");
                         content = fill(content, {
                             className: component,
