@@ -1,4 +1,6 @@
 import json from "@rollup/plugin-json";
+import { dependencies } from "./package.json";
+import { builtinModules } from "module";
 
 export default {
     input: "src/index.js",
@@ -9,6 +11,7 @@ export default {
         inlineDynamicImports: true
     },
     plugins: [
-        json()
-    ]
+        json(),
+    ],
+    external: builtinModules.concat(Object.keys(dependencies))
 }

@@ -165,7 +165,7 @@ function runCommand(command, args) {
     }
 }
 
-var version = "1.0.15";
+var version = "1.0.151";
 
 let args = process.argv;
 args.shift();
