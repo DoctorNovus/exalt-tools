@@ -1,3 +1,5 @@
+import json from "@rollup/plugin-json";
+
 export default {
     input: "src/index.js",
     output: {
@@ -5,5 +7,8 @@ export default {
         format: "cjs",
         banner: "#!/usr/bin/env node",
         inlineDynamicImports: true
-    }
+    },
+    plugins: [
+        json()
+    ]
 }

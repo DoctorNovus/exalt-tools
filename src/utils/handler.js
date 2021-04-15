@@ -1,4 +1,5 @@
 import create from "../commands/create";
+import { color } from "./logger";
 
 export function runCommand(command, args) {
     switch (command) {
@@ -7,6 +8,6 @@ export function runCommand(command, args) {
             break;
 
         default:
-            console.log(`Exalt-Tools Base Options:\n- create`);
+            console.log(`${color.bright}${color.fgBlue}Exalt-Tools Base Options:\n${color.fgCyan}- create${color.reset}`);
     }
 }

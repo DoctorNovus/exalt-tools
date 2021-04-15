@@ -1,6 +1,6 @@
 {
   "name": "exalt-tools",
-  "version": "1.0.12",
+  "version": "1.0.15",
   "description": "A CLI interface for exalt tools",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,8 @@
     "exalt-tools": "./bin/exalt-tools.js"
   },
   "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
+    "node-fetch": "^2.6.1",
     "rollup": "^2.45.0"
   }
 }

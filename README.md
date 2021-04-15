@@ -45,3 +45,5 @@ export class {{className}} extends Component {
 
 Component.create({ name: "{{componentName}}", styles: [style] }, {{className}});
 ```
+
+Template extension can either be `.txt` or `.tt`.
